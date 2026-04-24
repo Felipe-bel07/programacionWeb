@@ -1,51 +1,72 @@
-:root {
- 
-  // COLORES — FONDO
-  --color-bg-primary:   #0D0D0F;
-  --color-bg-secondary: #141218;
-  --color-bg-card:      #1A1520;
- 
-  // COLORES — ACENTO
-  --color-accent:       #7F77DD;
-  --color-accent-light: #AFA9EC;
-  --color-accent-faint: #E8E6FF;
- 
-  // COLORES — TEXTO
-  --color-text-primary:   #E8E6FF;
-  --color-text-secondary: #8B8A9E;
-  --color-text-muted:     #4A4857;
- 
-  // COLORES — BORDE
-  --color-border:       rgba(127, 119, 221, 0.15);
-  --color-border-hover: rgba(127, 119, 221, 0.35);
- 
-  // TIPOGRAFÍA — FAMILIAS
-  --font-display: 'Space Mono', monospace;
-  --font-body:    'DM Sans', sans-serif;
- 
-  // TIPOGRAFÍA — TAMAÑOS
-  --fs-hero:  clamp(2.5rem, 6vw, 5rem);
-  --fs-h2:    clamp(1.5rem, 3vw, 2.25rem);
-  --fs-h3:    1.125rem;
-  --fs-body:  1rem;
-  --fs-small: 0.875rem;
-  --fs-xs:    0.75rem;
- 
-  // TIPOGRAFÍA — PESOS
-  --fw-regular: 400;
-  --fw-medium:  500;
-  --fw-bold:    700;
- 
-  // TIPOGRAFÍA — INTERLINEADO
-  --lh-tight:  1.15;
-  --lh-normal: 1.6;
-  --lh-loose:  1.8;
- 
-  // ESPACIADO
-  --space-xs:  0.25rem;
-  --space-sm:  0.5rem;
-  --space-md:  1rem;
-  --space-lg:  2rem;
-  --space-xl:  4rem;
-  --space-2xl: 8rem;
+@use 'utility/reset' as *;
+@use 'utility/variables' as *;
+@use 'utility/utilities' as *;
+@use 'utility/btn' as *;
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: $space-lg $space-xl ;
+  background-color: $color-nav;
+
+  .logo{
+    @include flex-center; /**/
+  }
+
+  .btn__menu{
+    @include flex-center;
+    flex-direction: column;
+    gap: $space-sm;
+    position: static;
+    z-index: 20;
+    right: 0;
+
+    
+    span {
+      background-color: $color-text;
+      width: $space-xl;
+      height: $space-xs;
+      border-radius: 5px;
+    }
+
+    &--active {
+      span{
+        
+      }
+    }
+
+    
+  }
+
+  .nav{
+    @include flex-center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: $color-nav;
+    backdrop-filter: blur(18px);
+    height: 100dvh;
+    width: 30dvh;
+    right: -100%;
+    transition: ease-in-out .5s;
+    
+    &__list{
+    display: flex;
+    flex-direction: column;
+    gap: $space-xl;
+    position: absolute;
+    top: 0;
+    padding-top: 80px;
+    }
+
+    &--active{
+      right: 0;
+    }
+
+  // ---- Tablet ----
+
+
+  // ---- Desktop ----
+
+  }
 }

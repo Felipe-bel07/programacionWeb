@@ -1,0 +1,39 @@
+@use '../utility/variables' as *;
+
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: $space-lg $space-xl ;
+    border-radius: $space-sm;
+    font-size: $space-lg;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+    &:hover{
+        background-color: $color-accent;
+    }
+
+    // ── Modificadores ──
+    &--primary {
+        background-color: $color-accent;
+        color: #fff;
+
+        &:hover {
+            background-color: darken($color-accent, 10%);
+        }
+    }
+
+    &--outline {
+        background-color: transparent;
+        border: 2px solid $color-accent;
+        color: $color-accent;
+
+        &:hover {
+            background-color: $color-accent;
+            color: #fff;
+        }
+    }
+}

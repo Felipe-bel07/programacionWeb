@@ -7,126 +7,101 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/programacionWeb/user_history_1/assets/css/styles.css" />
 
 </head>
 <body>
     <header>
-        <div  class="logo-name">
-        <span >{</span>
-        <span>Felipe Beltrán</span>
-        <span >}</span>
+        <div  class="logo">
+            <span class="logo__item logo--edge">{</span>
+            <h2 class="logo__item">Felipe Beltrán</h2>
+            <span class="logo__item logo--edge">}</span>
         </div>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="#about-me">About me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="pets.html" class="nav-special">My pets</a></li>
+
+        <div class="btn__menu" onclick="btnMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="nav">  
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a  href="#about-me">About me</a>
+                </li>
+                <li class="nav__item">
+                    <a  href="#projects">Projects</a>
+                </li>
+                <li class="nav__item">
+                    <a  href="#contact">Contact</a>
+                </li>
+                <li class="nav__item">
+                    <a class="link--special" href="pets.html">My pets</a>
+                </li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <!-- ===================== Presentation ===================== -->
+    <main class="main">
 
-        <section class ="hero">
-            <div class="hero-text">
-                <h1>Hello, I'm <span>Felipe</span></h1>
-                <p>Aspiring Software Developer focused on building clean and functional web applications.</p>
-                <a href="#contact" class="btn">Contact me</a>
-            </div>
-            <div class="hero-img">
-                <img src="imgs/peggy_marco-white-male-1834119-Photoroom.png" alt="template">
-            </div>
-        </section>
+    <!-- ===================== Hero ===================== -->
+    <section class="hero">
+        <div class="hero__text">
+            <h1 class="hero__title">Hello, I'm <span class="hero__name">Felipe</span></h1>
+            <p class="hero__description">Aspiring Software Developer focused on building clean and functional web applications.</p>
+            <a href="#contact" class="btn">Contact me</a>
+        </div>
+        <div class="hero__image">
+            <img class="hero__img" src="" alt="Felipe, aspiring software developer">
+        </div>
+    </section>
 
-        <!-- ===================== About me ===================== -->
-        
-        <section id ="about-me">
-            <div class="about-paragraph">
-                <h2>About Me</h2>
-                <p>
-                    I'm an aspiring Software Developer currently focused on learning 
-                    the fundamentals of backend. I enjoy building clean, structured, 
-                    and funtional databases, API, queries.
-                </p>
-                <p>
-                    I'm currently improving my skills through hands-on projects, 
-                    where I practice databases creation, MySQL queries, OOP with java, and much more.
-                </p>
-                <p>
-                    My goal is to become a professional developer and work on real-world 
-                    applications that solve meaningful problems.
-                </p>
-            </div>
+    <!-- ===================== About me ===================== -->
+    <section class="about" id="about-me">
+        <div class="about__bio">
+            <h2 class="about__title">About Me</h2>
+            <p class="about__text">
+                I'm an aspiring Software Developer currently focused on learning
+                the fundamentals of backend. I enjoy building clean, structured,
+                and functional databases, API, queries.
+            </p>
+            <p class="about__text">
+                I'm currently improving my skills through hands-on projects,
+                where I practice databases creation, MySQL queries, OOP with Java, and much more.
+            </p>
+            <p class="about__text">
+                My goal is to become a professional developer and work on real-world
+                applications that solve meaningful problems.
+            </p>
+        </div>
 
-            <div class="skills">
-                <h3>Skills</h3>
-                <ul>
-                    <li>Java (OOP fundamentals: classes, objects, inheritance)</li>
-                    <li>Basic Backend Development (APIs concepts)</li>
-                    <li>SQL & Databases (basic queries, data management)</li>
-                    <li>Git & GitHub (version control and collaboration)</li>
-                    <li>HTML5 & CSS3 (basic frontend for full-stack understanding)</li>
-                </ul>
-            </div>
-        </section>
-        
-        
-        <!-- ===================== Projects ===================== -->
-
-        <section id ="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li>
-                    <strong>Personal Portfolio Website</strong><br>
-                    A responsive website built using HTML and CSS to showcase my work and skills.
-                </li>
-                <li>
-                    <strong>Landing Page Design</strong><br>
-                    A modern landing page focused on layout structure, typography, and visual balance.
-                </li>
-                <li>
-                    <strong>Inventory Management System (Python)</strong><br>
-                    A console-based application to manage products and calculate basic statistics.
-                </li>
+        <div class="about__skills">
+            <h3 class="about__skills-title">Skills</h3>
+            <ul class="about__skills-list">
+                <li class="about__skills-item">Java (OOP fundamentals: classes, objects, inheritance)</li>
+                <li class="about__skills-item">Basic Backend Development (APIs concepts)</li>
+                <li class="about__skills-item">SQL & Databases (basic queries, data management)</li>
+                <li class="about__skills-item">Git & GitHub (version control and collaboration)</li>
+                <li class="about__skills-item">HTML5 & CSS3 (basic frontend for full-stack understanding)</li>
             </ul>
-        </section>
+        </div>
+    </section>
 
-        <!-- ===================== Contact ===================== -->
-        
-        <section id ="contact">
-            <h2>Contact</h2>
-            <p>
-                I'm currently open to learning opportunities and entry-level roles. 
-                Feel free to reach out!
-            </p>
+    <!-- ===================== Projects ===================== -->
+    <section class="projects" id="projects">
+ 
+    </section>
 
-            <form>
-                <label for="name">Name:</label><br>
-                <input id="name" type="text" placeholder="Your name" required><br><br>
+    <!-- ===================== Contact ===================== -->
+    <section class="contact" id="contact">
 
-                <label for="email">Email:</label><br>
-                <input id="email" type="email" placeholder="Your email" required><br><br>
+    </section>
 
-                <label for="message">Message:</label><br>
-                <input id="message" type="text" placeholder="Your message"><br><br>
-
-                <button type="submit">Send Message</button>
-            </form>
-
-            <p>
-                Or contact me directly at: 
-                <a href="mailto:felipe@email.com">felipe@email.com</a>
-            </p>
-        </section>
-
-    </main>
+</main>
 
     <footer>
         <p>© 2026 Felipe Beltrán</p>
     </footer>
-    
+    <script src="./js/main.js"></script>    
 </body>
+
 </html>
