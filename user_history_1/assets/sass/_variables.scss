@@ -1,0 +1,37 @@
+// _variables.scss
+$bp-tablet:  768px;
+$bp-desktop: 1024px;
+$bp-wide:    1280px;
+
+// --- CSS Custom Properties ---
+:root {
+  // Colors
+  --color-bg:           #0E0E0F;
+  --color-surface:      #1A1A1D;
+  --color-surface-2:    #2A2A2E;
+  --color-text:         #E4E4E7;
+  --color-text-muted:   #9CA3AF;
+  --color-accent:       #6366F1;
+  --color-accent-light: #A5B4FC;
+  --color-border:       #2A2A2E;
+
+  // Typography
+  --font-primary: 'Inter', sans-serif;
+  --font-mono:    'Fira Code', monospace;
+  --fs-sm:   0.875rem;
+  --fs-base: 1rem;
+  --fs-md:   1.25rem;
+  --fs-lg:   1.5rem;
+  --fs-xl:   2rem;
+  --fs-2xl:  3rem;
+
+  // Spacing 
+  --space-xs:  0.25rem;
+  --space-sm:  0.5rem;
+  --space-md:  1rem;
+  --space-lg:  1.5rem;
+  --space-xl:  2.5rem;
+  --space-2xl: 5rem;
+
+
+}
