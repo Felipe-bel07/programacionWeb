@@ -7,15 +7,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/programacionWeb/user_history_1/assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
 
 </head>
 <body>
     <header>
         <div  class="logo">
-            <span class="logo__item logo--edge">{</span>
+            <span class="logo__edge">{</span>
             <h2 class="logo__item">Felipe Beltrán</h2>
-            <span class="logo__item logo--edge">}</span>
+            <span class="logo__edge">}</span>
         </div>
 
         <div class="btn__menu" onclick="btnMenu()">
@@ -45,20 +45,18 @@
 
     <!-- ===================== Hero ===================== -->
     <section class="hero">
-        <div class="hero__text">
-            <h1 class="hero__title">Hello, I'm <span class="hero__name">Felipe</span></h1>
-            <p class="hero__description">Aspiring Software Developer focused on building clean and functional web applications.</p>
-            <a href="#contact" class="btn">Contact me</a>
-        </div>
-        <div class="hero__image">
-            <img class="hero__img" src="" alt="Felipe, aspiring software developer">
-        </div>
+        <div class="hero__bg">FELIPE</div>
+        <p class="hero__subtitle">Portfolio 2026</p>
+        <h1 class="hero__title">Hello, I'm <span class="hero__name">Felipe</span></h1>
+        <p class="hero__description">Aspiring Software Developer focused on building clean and functional web applications.</p>
+        <a href="#contact" class="btn">Contact me</a>
     </section>
 
     <!-- ===================== About me ===================== -->
     <section class="about" id="about-me">
         <div class="about__bio">
-            <h2 class="about__title">About Me</h2>
+            <h2 class="about__title">About <span>Me</span></h2>
+            <div class="about__line"></div>
             <p class="about__text">
                 I'm an aspiring Software Developer currently focused on learning
                 the fundamentals of backend. I enjoy building clean, structured,
@@ -76,12 +74,8 @@
 
         <div class="about__skills">
             <h3 class="about__skills-title">Skills</h3>
-            <ul class="about__skills-list">
-                <li class="about__skills-item">Java (OOP fundamentals: classes, objects, inheritance)</li>
-                <li class="about__skills-item">Basic Backend Development (APIs concepts)</li>
-                <li class="about__skills-item">SQL & Databases (basic queries, data management)</li>
-                <li class="about__skills-item">Git & GitHub (version control and collaboration)</li>
-                <li class="about__skills-item">HTML5 & CSS3 (basic frontend for full-stack understanding)</li>
+            <ul class="about__skills-list" id="skill__list">
+                
             </ul>
         </div>
     </section>
