@@ -1,19 +1,31 @@
-@use 'utility/reset' as *;
-@use 'utility/variables' as *;
-@use 'utility/utilities' as *;
-@use 'utility/btn' as *;
+@use "utility/reset" as *;
+@use "utility/variables" as *;
+@use "utility/utilities" as *;
+@use "utility/btn" as *;
+
+
+//HEADER AND NAV
 
 header {
   display: flex;
   justify-content: space-between;
-  padding: $space-lg $space-xl ;
+  padding: $space-lg $space-xl;
   background-color: $color-nav;
 
-  .logo{
-    @include flex-center; /**/
+  .logo {
+    @include flex-center;
+    gap: $space-sm;
+    .logo__edge {
+      font-size: $fs-2xl;
+      font-weight: bold;
+      color: $color-accent;
+    }
+    .logo__item {
+      font-size: $fs-xl;
+    }
   }
 
-  .btn__menu{
+  .btn__menu {
     @include flex-center;
     flex-direction: column;
     gap: $space-sm;
@@ -21,24 +33,35 @@ header {
     z-index: 20;
     right: 0;
 
-    
     span {
       background-color: $color-text;
       width: $space-xl;
       height: $space-xs;
       border-radius: 5px;
+      transition: .5s ease;
     }
 
     &--active {
-      span{
-        
+      span {
+        &:first-child{
+          transform: translateY(calc($space-sm + $space-xs)) rotate(45deg);
+        }
+        &:nth-child(2){
+          opacity: 0;
+          transform: scaleX(0);
+        }
+        &:last-child{
+           transform: translateY(calc(($space-sm + $space-xs) * -1)) rotate(-45deg);
+        }
       }
     }
 
-    
+    @include desktop {
+      display: none;
+    }
   }
 
-  .nav{
+  .nav {
     @include flex-center;
     position: fixed;
     top: 0;
@@ -46,27 +69,233 @@ header {
     background-color: $color-nav;
     backdrop-filter: blur(18px);
     height: 100dvh;
-    width: 30dvh;
+    width: 50dvw;
     right: -100%;
-    transition: ease-in-out .5s;
-    
-    &__list{
-    display: flex;
-    flex-direction: column;
-    gap: $space-xl;
-    position: absolute;
-    top: 0;
-    padding-top: 80px;
+    transition: ease-in-out 0.5s;
+    z-index: 10;
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: $space-xl;
+      position: absolute;
+      top: 0;
+      padding-top: 80px;
     }
 
-    &--active{
+    &--active {
       right: 0;
     }
 
-  // ---- Tablet ----
+    // ---- Desktop ----
+    @include desktop {
+      @include flex-center;
+      position: static;
+      background-color: transparent;
+      height: 100%;
+      width: inherit;
+      backdrop-filter: unset;
+      transition: none;
+      white-space: nowrap;
+      &__list {
+        flex-direction: row; 
+        position: static; 
+        padding-top: 0; 
+        gap: $space-xl;
+        
+      }
+      
+      a:hover{
+        color: $color-accent;
+      }
+
+    }
+  }
+
+  @include desktop {
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+  }
+}
 
 
-  // ---- Desktop ----
 
+//HERO SECTION
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 30dvh;
+  text-align: center;
+  padding: 0 $space-xl;
+  gap: $space-md;
+  position: relative;  
+  overflow: hidden;    
+
+  &__bg {
+    position: absolute;
+    font-size: 30vw;         
+    font-weight: 900;
+    color: rgba(99, 101, 241, 0.03);  
+    user-select: none;       
+    pointer-events: none;    
+    letter-spacing: -4px;
+  }
+
+  &__subtitle {
+    font-family: $font-mono;
+    font-size: $fs-sm;
+    color: $color-text-muted;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    position: relative;  
+  }
+
+  &__title {
+    font-size: $fs-2xl;
+    color: $color-text;
+    position: relative;
+  }
+
+  &__name {
+    color: $color-accent;
+  }
+
+  &__description {
+    color: $color-text-muted;
+    font-size: $fs-base;
+    max-width: 400px;
+    position: relative;
+  }
+
+  .btn {
+    position: relative;  
+    background-color: $color-accent;
+  }
+
+
+  //HERO DESKTOP
+
+  @include desktop {
+    min-height: 60dvh;     
+
+    &__bg {
+      font-size: 20vw;       
+      color: rgba(99, 101, 241, 0.03); 
+    }
+
+    &__subtitle {
+      font-size: $fs-base;  
+    }
+
+    &__title {
+      font-size: $fs-2xl * 1.5; 
+    }
+
+    &__description {
+      font-size: $fs-md;     
+      max-width: 600px;      
+    }
+
+    .btn{
+      &:hover{
+        color: $color-accent;
+        background-color: $color-surface;
+        border: 1px solid $color-accent;
+      }
+    }
+  }
+}
+
+//ABOUT SECTION
+.about{
+  display: flex;
+  flex-direction: column;
+  padding: $space-xl; 
+  gap: $space-xl; 
+
+  &__title {
+    font-size: $fs-xl;
+    color: $color-text;
+    margin-bottom: $space-sm;
+
+    span{
+      color: $color-accent;
+    }
+  }
+
+  &__line {
+    width: 40px;
+    height: 2px;
+    background-color: $color-accent; 
+    margin-bottom: $space-lg;
+    border-radius: 2px;
+  }
+
+  &__text {
+    color: $color-text-muted;   
+    font-size: $fs-base;
+    line-height: 1.8;            
+    margin-bottom: $space-md;  
+  }
+
+  &__skills-title {
+    font-size: $fs-md;
+    color: $color-text;
+    margin-bottom: $space-md;
+  }
+
+  &__skills-list {
+    display: flex;
+    flex-wrap: wrap;   
+    gap: $space-sm;
+  }
+
+  &__skills-item {
+    display: flex;
+    align-items: center;
+    gap: $space-sm;
+    padding: $space-sm $space-md;
+    background-color: $color-surface;   
+    border: 1px solid $color-border;   
+    border-radius: 99px;               
+    color: $color-text;
+    font-size: $fs-sm;
+
+    &::before {
+      content: '';                       
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;                
+      background-color: $color-accent;   
+      flex-shrink: 0;                    
+    }
+  }
+}
+
+
+//PROJECTS SECTION
+
+
+
+
+
+
+
+
+//FOOTER
+footer {
+  background-color: $color-surface;
+  border-top: 1px solid $color-border;
+  padding: $space-lg $space-xl;
+  text-align: center;
+
+  p {
+    color: $color-text-muted;
+    font-family: $font-mono;
+    font-size: $fs-sm;
   }
 }
