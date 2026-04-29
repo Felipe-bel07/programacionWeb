@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/styles.css" />
 
 </head>
+
 <body>
     <header>
-        <div  class="logo">
+        <div class="logo">
             <span class="logo__edge">{</span>
             <h2 class="logo__item">Felipe Beltrán</h2>
             <span class="logo__edge">}</span>
@@ -23,16 +27,16 @@
             <span></span>
             <span></span>
         </div>
-        <nav class="nav">  
+        <nav class="nav">
             <ul class="nav__list">
                 <li class="nav__item">
-                    <a  href="#about-me">About me</a>
+                    <a href="#about-me">About me</a>
                 </li>
                 <li class="nav__item">
-                    <a  href="#projects">Projects</a>
+                    <a href="#projects">Projects</a>
                 </li>
                 <li class="nav__item">
-                    <a  href="#contact">Contact</a>
+                    <a href="#contact">Contact</a>
                 </li>
                 <li class="nav__item">
                     <a class="link--special" href="pets.html">My pets</a>
@@ -43,59 +47,79 @@
 
     <main class="main">
 
-    <!-- ===================== Hero ===================== -->
-    <section class="hero">
-        <div class="hero__bg">FELIPE</div>
-        <p class="hero__subtitle">Portfolio 2026</p>
-        <h1 class="hero__title">Hello, I'm <span class="hero__name">Felipe</span></h1>
-        <p class="hero__description">Aspiring Software Developer focused on building clean and functional web applications.</p>
-        <a href="#contact" class="btn">Contact me</a>
-    </section>
+        <!-- ===================== Hero ===================== -->
+        <section class="hero">
+            <div class="hero__bg">FELIPE</div>
+            <p class="hero__subtitle">Portfolio 2026</p>
+            <h1 class="hero__title">Hello, I'm <span class="hero__name">Felipe</span></h1>
+            <p class="hero__description">Aspiring Software Developer focused on building clean and functional web
+                applications.</p>
+            <a href="#contact" class="btn">Contact me</a>
+        </section>
 
-    <!-- ===================== About me ===================== -->
-    <section class="about" id="about-me">
-        <div class="about__bio">
-            <h2 class="about__title">About <span>Me</span></h2>
-            <div class="about__line"></div>
-            <p class="about__text">
-                I'm an aspiring Software Developer currently focused on learning
-                the fundamentals of backend. I enjoy building clean, structured,
-                and functional databases, API, queries.
-            </p>
-            <p class="about__text">
-                I'm currently improving my skills through hands-on projects,
-                where I practice databases creation, MySQL queries, OOP with Java, and much more.
-            </p>
-            <p class="about__text">
-                My goal is to become a professional developer and work on real-world
-                applications that solve meaningful problems.
-            </p>
-        </div>
+        <!-- ===================== About me ===================== -->
+        <section class="about" id="about-me">
+            <div class="about__bio">
+                <h2 class="about__title">About <span>Me</span></h2>
+                <div class="about__line"></div>
+                <p class="about__text">
+                    I'm an aspiring Software Developer currently focused on learning
+                    the fundamentals of backend. I enjoy building clean, structured,
+                    and functional databases, API, queries.
+                </p>
+                <p class="about__text">
+                    I'm currently improving my skills through hands-on projects,
+                    where I practice databases creation, MySQL queries, OOP with Java, and much more.
+                </p>
+                <p class="about__text">
+                    My goal is to become a professional developer and work on real-world
+                    applications that solve meaningful problems.
+                </p>
+            </div>
 
-        <div class="about__skills">
-            <h3 class="about__skills-title">Skills</h3>
-            <ul class="about__skills-list" id="skill__list">
-                
-            </ul>
-        </div>
-    </section>
+            <div class="about__skills">
+                <h3 class="about__skills-title">Skills</h3>
+                <ul class="about__skills-list" id="skill__list">
 
-    <!-- ===================== Projects ===================== -->
-    <section class="projects" id="projects">
- 
-    </section>
+                </ul>
+            </div>
+        </section>
 
-    <!-- ===================== Contact ===================== -->
-    <section class="contact" id="contact">
+        <!-- ===================== Projects ===================== -->
+        <section class="projects" id="myprojects">
+            <h2 class="projects__title">My <span>projects</span></h2>
+            <div class="projects__grid" id="projects-grid">
 
-    </section>
+            </div>
+        </section>
 
-</main>
+        <!-- ===================== Contact ===================== -->
+        <section class="contact" id="contact">
+            <h2 class="contact__title">Get in <span>Touch</span></h2>
+            <div class="contact__line"></div>
+            <form class="contact__form">
+                <div class="contact__field">
+                    <label class="contact__label" for="name">Name</label>
+                    <input class="contact__input" type="text" id="name" placeholder="Your name">
+                </div>
+                <div class="contact__field">
+                    <label class="contact__label" for="email">Email</label>
+                    <input class="contact__input" type="email" id="email" placeholder="your@email.com">
+                </div>
+                <div class="contact__field">
+                    <label class="contact__label" for="message">Message</label>
+                    <textarea class="contact__textarea" id="message" placeholder="Your message..." rows="5"></textarea>
+                </div>
+                <button class="contact__btn btn" type="submit">Send message</button>
+            </form>
+        </section>
+
+    </main>
 
     <footer>
         <p>© 2026 Felipe Beltrán</p>
     </footer>
-    <script src="./js/main.js"></script>    
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
