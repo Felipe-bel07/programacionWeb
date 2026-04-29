@@ -1,0 +1,162 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+  background: linear-gradient(180deg, rgba(99, 101, 241, 0.096), transparent), #0E0E0F;
+  color: #E4E4E7;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+main {
+  flex: 1;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 2.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn:hover {
+  background-color: #6366F1;
+}
+.btn--primary {
+  background-color: #6366F1;
+  color: #fff;
+}
+.btn--primary:hover {
+  background-color: #6366F1;
+}
+.btn--outline {
+  background-color: transparent;
+  border: 2px solid #6366F1;
+  color: #6366F1;
+}
+.btn--outline:hover {
+  background-color: #6366F1;
+  color: #fff;
+}
+
+.pets-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2.5rem;
+  border-bottom: 1px solid #2A2A2E;
+}
+.pets-header__title {
+  font-size: 1.5rem;
+}
+.pets-header__title span {
+  color: #6366F1;
+}
+.pets-header__back {
+  color: #6366F1;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+.pets-header__back:hover {
+  text-decoration: underline;
+}
+
+.pets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 5rem 2.5rem;
+}
+.pets__card {
+  background-color: #1A1A1D;
+  border: 1px solid #2A2A2E;
+  border-radius: 12px;
+  overflow: hidden;
+  flex: 1 1 280px;
+}
+.pets__img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.pets__info {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.pets__name {
+  font-size: 1.25rem;
+  color: #E4E4E7;
+}
+.pets__description {
+  font-size: 0.875rem;
+  color: #9CA3AF;
+  line-height: 1.7;
+}
+
+.gallery {
+  padding: 5rem 2.5rem;
+}
+.gallery__title {
+  font-size: 1.5rem;
+  color: #E4E4E7;
+  margin-bottom: 2.5rem;
+}
+.gallery__title span {
+  color: #6366F1;
+}
+.gallery__grid {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (min-width: 768px) {
+  .gallery__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .gallery__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.gallery__img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/*# sourceMappingURL=pets.css.map */

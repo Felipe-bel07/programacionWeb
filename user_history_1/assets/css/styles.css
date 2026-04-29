@@ -222,7 +222,7 @@ header .nav--active {
 }
 .hero__description {
   color: #9CA3AF;
-  font-size: 1rem;
+  font-size: 1.25rem;
   max-width: 400px;
   position: relative;
 }
@@ -261,6 +261,12 @@ header .nav--active {
   padding: 2.5rem;
   gap: 2.5rem;
 }
+@media (min-width: 1024px) {
+  .about {
+    font-size: 3rem;
+    align-items: center;
+  }
+}
 .about__title {
   font-size: 2rem;
   color: #E4E4E7;
@@ -269,6 +275,12 @@ header .nav--active {
 .about__title span {
   color: #6366F1;
 }
+@media (min-width: 1024px) {
+  .about__title {
+    font-size: 3rem;
+    text-align: center;
+  }
+}
 .about__line {
   width: 40px;
   height: 2px;
@@ -276,16 +288,34 @@ header .nav--active {
   margin-bottom: 1.5rem;
   border-radius: 2px;
 }
+@media (min-width: 1024px) {
+  .about__line {
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+}
 .about__text {
   color: #9CA3AF;
-  font-size: 1rem;
+  font-size: 1.5rem;
   line-height: 1.8;
   margin-bottom: 1rem;
+}
+@media (min-width: 1024px) {
+  .about__text {
+    font-size: 1.5rem;
+    text-align: center;
+  }
 }
 .about__skills-title {
   font-size: 1.25rem;
   color: #E4E4E7;
   margin-bottom: 1rem;
+}
+@media (min-width: 1024px) {
+  .about__skills-title {
+    font-size: 2rem;
+    text-align: center;
+  }
 }
 .about__skills-list {
   display: flex;
@@ -310,6 +340,146 @@ header .nav--active {
   border-radius: 50%;
   background-color: #6366F1;
   flex-shrink: 0;
+}
+@media (min-width: 1024px) {
+  .about__skills-item {
+    font-size: 1.25rem;
+  }
+}
+
+.projects {
+  padding: 5rem 2.5rem;
+}
+.projects__title {
+  font-size: 2rem;
+  color: #E4E4E7;
+  margin-bottom: 2.5rem;
+}
+.projects__title span {
+  color: #6366F1;
+}
+@media (min-width: 1024px) {
+  .projects__title {
+    font-size: 3rem;
+  }
+}
+.projects__grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  .projects__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .projects__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.projects__card {
+  background-color: #1A1A1D;
+  border: 1px solid #2A2A2E;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: border-color 0.3s ease;
+}
+.projects__card:hover {
+  border-color: #6366F1;
+}
+.projects .card-title {
+  font-size: 1.5rem;
+  color: #E4E4E7;
+}
+.projects .card-description {
+  font-size: 1.25rem;
+  color: #9CA3AF;
+  line-height: 1.7;
+  flex: 1;
+}
+.projects .card-techs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.projects .card-tech {
+  font-size: 0.875rem;
+  color: #A5B4FC;
+  background-color: rgba(99, 101, 241, 0.1);
+  border: 1px solid rgba(99, 101, 241, 0.3);
+  border-radius: 999px;
+  padding: 0.25rem 1rem;
+}
+.projects .card-link {
+  font-size: 1.25rem;
+  color: #6366F1;
+  font-weight: 500;
+  text-decoration: none;
+}
+.projects .card-link:hover {
+  text-decoration: underline;
+}
+
+.contact {
+  padding: 5rem 2.5rem;
+}
+.contact__title {
+  font-size: 2rem;
+  color: #E4E4E7;
+  margin-bottom: 0.5rem;
+}
+.contact__title span {
+  color: #6366F1;
+}
+.contact__line {
+  width: 40px;
+  height: 2px;
+  background-color: #6366F1;
+  margin-bottom: 2.5rem;
+  border-radius: 2px;
+}
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 100%;
+}
+.contact__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.contact__label {
+  font-size: 0.875rem;
+  color: #9CA3AF;
+  font-family: "Fira Code", monospace;
+}
+.contact__input, .contact__textarea {
+  background-color: #1A1A1D;
+  border: 1px solid #2A2A2E;
+  border-radius: 8px;
+  padding: 1rem;
+  color: #E4E4E7;
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  transition: border-color 0.3s ease;
+  outline: none;
+}
+.contact__input::placeholder, .contact__textarea::placeholder {
+  color: #9CA3AF;
+}
+.contact__input:focus, .contact__textarea:focus {
+  border-color: #6366F1;
+}
+.contact__textarea {
+  resize: vertical;
+}
+.contact__btn {
+  align-self: center;
 }
 
 footer {

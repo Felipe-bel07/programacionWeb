@@ -1,0 +1,105 @@
+@use "utility/reset" as *;
+@use "utility/variables" as *;
+@use "utility/utilities" as *;
+@use "utility/btn" as *;
+
+
+
+
+.pets-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $space-lg $space-xl;
+  border-bottom: 1px solid $color-border;
+
+  &__title {
+    font-size: 1.5rem;
+    span { color: $color-accent; }
+  }
+
+  &__back {
+    color: $color-accent;
+    text-decoration: none;
+    font-size: 0.875rem;
+
+    &:hover { text-decoration: underline; }
+  }
+}
+
+// ---- Mascotas ----
+.pets {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: $space-lg;
+  padding: $space-2xl $space-xl;
+
+  &__card {
+    background-color: $color-surface;
+    border: 1px solid $color-border;
+    border-radius: 12px;
+    overflow: hidden;
+    flex: 1 1 280px; // mínimo 280px, crece para llenar espacio
+  }
+
+  &__img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  &__info {
+    padding: $space-md;
+    display: flex;
+    flex-direction: column;
+    gap: $space-sm;
+  }
+
+  &__name {
+    font-size: 1.25rem;
+    color: $color-text;
+  }
+
+  &__description {
+    font-size: 0.875rem;
+    color: $color-text-muted;
+    line-height: 1.7;
+  }
+}
+
+// ---- Galería ----
+.gallery {
+  padding: $space-2xl $space-xl;
+
+  &__title {
+    font-size: 1.5rem;
+    color: $color-text;
+    margin-bottom: $space-xl;
+    span { color: $color-accent; }
+  }
+
+  &__grid {
+    display: grid;
+    gap: $space-sm;
+
+
+    grid-template-columns: repeat(2, 1fr);
+
+
+    @include tablet {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+
+    @include desktop {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+}
